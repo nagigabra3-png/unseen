@@ -1,0 +1,8 @@
+{
+  "name": "unseen",
+  "description": "A curated e-commerce gallery for student artwork featuring high-fidelity framing previews and a minimal institutional aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

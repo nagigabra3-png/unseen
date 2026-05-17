@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-gallery-white: #F9F9F9;
+  --color-obsidian: #1A1A1A;
+  --color-studio-grey: #E2E2E2;
+  --color-gallery-bg: #f5f5f5;
+
+  --letter-spacing-tightest: -0.02em;
+  --letter-spacing-widest: 0.25em;
+
+  --animate-bracket-open: bracket-open 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-gallery-white text-obsidian font-sans antialiased overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .section-block {
+    @apply min-h-[70vh] flex flex-col justify-center mb-32;
+  }
+
+  .chart-container {
+    @apply relative w-full max-w-[600px] mx-auto h-[300px] md:h-[350px];
+  }
+
+  /* Theme Background Pattern */
+  .bg-archival-dots {
+    background-image: radial-gradient(#1A1A1A 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    @apply opacity-[0.03];
+  }
+
+  /* Sophisticated Shadow Box */
+  .shadow-box-gallery {
+    @apply shadow-2xl ring-8 ring-white ring-offset-2 ring-offset-gray-100 border border-gray-200;
+  }
+}
